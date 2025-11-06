@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+.switch {
+  display: inline-block;
+  position: relative;
+  height: 34px;
+  width: 60px;
+  background-color: #ccc;
+  border-radius: 34px;
+}
+
+.switch_input {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.switch_slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 34px;
+  transition: 0.4s;
+  background-color: #ccc;
+}
+
+.switch_slider::before {
+  content: "";
+  position: absolute;
+  cursor: pointer;
+  left: 4px;
+  bottom: 4px;
+  height: 26px;
+  width: 26px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+.switch_input:checked + .switch_slider {
+  background-color: #2196f3;
+}
+
+.switch_input:checked + .switch_slider::before {
+  transform: translateX(26px);
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+}
+
+.switch_block {
+  display: flex;
+  margin-left: 50px;
+  margin-top: 50px;
+  text-align: center;
+  align-items: center;
+}
+
+.switch_text {
+  text-align: center;
+  margin: 20px;
+}
+
+.mode-hidden {
+  display: none;
+}
+
+.mode-active {
+  display: block;
+}
+
+.calc_simple {
+
+}
+
+.calc_expression {
+  
+}
