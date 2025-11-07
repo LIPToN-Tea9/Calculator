@@ -4,35 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <title>Calculator</title>
   </head>
   <body>
     <noscript>You need toggle on Javascript for see page!</noscript>
-    <div class="switch_block">
-      <p class="switch_text">Simple</p>
-      <label class="switch">
-        <input type="checkbox" class="switch_input" id="switch" />
-        <span class="switch_slider"></span>
-      </label>
-      <p class="switch_text">Expression</p>
+    <div class="calc">
+      <div class="switch_block">
+        <p class="switch_text">Simple</p>
+        <label class="switch">
+          <input type="checkbox" class="switch_input" id="switch" />
+          <span class="switch_slider"></span>
+        </label>
+        <p class="switch_text">Expression</p>
+      </div>
+      <div class="calc_simple mode-active" id="simpleBlock">
+        <input class="numbers" type="text" id="num1" /> <br />
+        <select class="opt" id="opt">
+          <option value="+">+</option>
+          <option value="-">-</option>
+          <option value="*">*</option>
+          <option value="/">/</option>
+        </select>
+        <br />
+        <input class="numbers" type="text" id="num2" /> <br />
+        <button class="btn" id="btn_simple">=</button>
+        <p class="result" id="result_simple">Try to Calc</p>
+      </div>
+      <div class="calc_expression mode-hidden" id="expBlock">
+        <input class="expression" type="text" id="numExp" /> <br />
+        <button class="btn" id="btn_exp">=</button>
+        <p class="result" id="result_exp">Try to Calc</p>
+      </div>
     </div>
-    <div class="calc_simple mode-active" id="simpleBlock">
-      <input class="numbers" type="number" id="num1" /> <br />
-      <select class="opt" id="opt">
-        <option value="+">+</option>
-        <option value="-">-</option>
-        <option value="*">*</option>
-        <option value="/">/</option>
-      </select>
-      <br />
-      <input class="numbers" type="number" id="num2" /> <br />
-      <button class="btn" id="btn_simple">=</button>
-    </div>
-    <div class="calc_expression mode-hidden" id="expBlock">
-      <input class="expression" type="text" id="exp" /> <br />
-      <button class="btn" id="btn_exp">=</button>
-    </div>
-    <p class="result" id="result"></p>
     <script src="index.js"></script>
   </body>
 </html>

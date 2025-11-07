@@ -4,7 +4,21 @@
 }
 
 body {
+  background-color: rgb(44, 187, 239);
+  text-align: center;
+  align-items: center;
+  justify-items: center;
+}
+
+.calc {
+  text-align: center;
+  align-items: center;
+  justify-items: center;
+  width: 260px;
+  margin-top: 50px;
   background-color: whitesmoke;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .switch {
@@ -59,8 +73,6 @@ body {
 
 .switch_block {
   display: flex;
-  margin-left: 50px;
-  margin-top: 50px;
   text-align: center;
   align-items: center;
 }
@@ -79,9 +91,69 @@ body {
 }
 
 .calc_simple {
+  margin-top: 30px;
+  text-align: center;
+  align-items: center;
+  width: 270px;
+    justify-items: center;
 
 }
 
+.numbers {
+  height: 25px;
+  width: 220px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #70bbf8;
+  padding: 10px;
+}
+
+.opt {
+  height: 25px;
+  width: 40px;
+  border: 2px solid #70bbf8;
+}
+
+.btn {
+  height: 70px;
+  width: 60px;
+  font-size: 60px;
+  background-color: whitesmoke;
+  border: none;
+  cursor: pointer;
+  transition: 0.1s;
+  color: black;
+}
+
+.btn:hover {
+  font-size: 70px;
+  color: #40a7fb;
+}
+
+.result {
+  width: 160px;
+  height: 20px;
+  padding: 10px;
+  border: 2px solid black;
+  color: white;
+  background-color: gray;
+  text-align: center;
+}
+
+
 .calc_expression {
-  
+  margin-top: 30px;
+  text-align: center;
+  align-items: center;
+    justify-items: center;
+
+  width: 270px;
+}
+
+.expression {
+  height: 40px;
+  width: 240px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #70bbf8;
 }
