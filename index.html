@@ -19,13 +19,24 @@
       </div>
       <div class="calc_simple mode-active" id="simpleBlock">
         <input class="numbers" type="text" id="num1" /> <br />
-        <select class="opt" id="opt">
-          <option value="+">+</option>
-          <option value="-">-</option>
-          <option value="*">*</option>
-          <option value="/">/</option>
-        </select>
-        <br />
+        <div class="operators">
+          <label class="option" for="plus">
+            <input type="radio" class="opt" id="plus" name="opt" value="+" />
+            <span>+</span>
+          </label>
+          <label class="option" for="minus">
+            <input type="radio" class="opt" id="minus" name="opt" value="-" /> 
+            <span>-</span>
+          </label>
+          <label class="option" for="multiplication">
+            <input type="radio" class="opt" id="multiplication" name="opt" value="*" />
+            <span>*</span>
+          </label>
+          <label class="option" for="division">
+            <input type="radio" class="opt" id="division" name="opt" value="/" />
+            <span>/</span>
+          </label>
+        </div>
         <input class="numbers" type="text" id="num2" /> <br />
         <button class="btn" id="btn_simple">=</button>
         <p class="result" id="result_simple">Try to Calc</p>

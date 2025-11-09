@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: rgb(44, 187, 239);
+  background-color: rgb(27, 144, 186);
   text-align: center;
   align-items: center;
   justify-items: center;
@@ -95,8 +95,7 @@ body {
   text-align: center;
   align-items: center;
   width: 270px;
-    justify-items: center;
-
+  justify-items: center;
 }
 
 .numbers {
@@ -108,16 +107,57 @@ body {
   padding: 10px;
 }
 
-.opt {
+.operators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 50px;
+  width: 220px;
+}
+
+.option {
+  display: flex;
   height: 25px;
-  width: 40px;
+  width: 35px;
   border: 2px solid #70bbf8;
+  background-color: whitesmoke;
+  margin-left: 10px;
+  margin-right: 10px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.option:hover {
+  transition: 0.4s;
+  scale: 1.2;
+  cursor: pointer;
+}
+
+.option:has(.opt:checked) {
+  background-color: #ff9800;
+  color: white;
+  border: 2px solid black;
+}
+
+.opt {
+  height: 0;
+  width: 0;
+  opacity: 0;
 }
 
 .btn {
-  height: 70px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
   width: 60px;
-  font-size: 60px;
+  font-size: 70px;
+  margin-bottom: 10px;
   background-color: whitesmoke;
   border: none;
   cursor: pointer;
@@ -126,27 +166,23 @@ body {
 }
 
 .btn:hover {
-  font-size: 70px;
+  scale: 1.1;
   color: #40a7fb;
 }
 
 .result {
-  width: 160px;
+  width: fit-content;
   height: 20px;
-  padding: 10px;
+  padding: 20px;
   border: 2px solid black;
-  color: white;
-  background-color: gray;
   text-align: center;
 }
-
 
 .calc_expression {
   margin-top: 30px;
   text-align: center;
   align-items: center;
-    justify-items: center;
-
+  justify-items: center;
   width: 270px;
 }
 

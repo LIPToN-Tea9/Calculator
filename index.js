@@ -20,7 +20,12 @@ checkbox.addEventListener("change", () => {
 
 const input1 = document.getElementById("num1");
 const input2 = document.getElementById("num2");
-const option = document.getElementById("opt");
+
+const plus = document.getElementById("plus");
+const minus = document.getElementById("minus");
+const multiplication = document.getElementById("multiplication");
+const division = document.getElementById("division");
+
 const resultS = document.getElementById("result_simple");
 const btnSimple = document.getElementById("btn_simple");
 const btnExp = document.getElementById("btn_exp");
@@ -38,8 +43,20 @@ inputExp.addEventListener("input", () => {
 });
 
 function simpleSum() {
-  let sum1 = input1.value + option.value + input2.value;
-  
+  let sum1 = "";
+  if (plus.checked) {
+    sum1 = input1.value + plus.value + input2.value;
+  } else if (minus.checked) {
+    sum1 = input1.value + minus.value + input2.value;
+  } else if (multiplication.checked) {
+    sum1 = input1.value + multiplication.value + input2.value;
+  } else if (division.checked) {
+    sum1 = input1.value + division.value + input2.value;
+  } else 
+    {resultS.textContent = "Error: select an operation";
+    return;
+  }
+
   if (input1.value === "" || input2.value === "") {
     resultS.textContent = "Error: empty field";
     return;
@@ -47,11 +64,10 @@ function simpleSum() {
   let res = eval(sum1);
   if (!isFinite(res)) {
     resultS.textContent = "Error: division by 0";
-    return
+    return;
   }
-  
 
-  resultS.textContent = res;
+  resultS.textContent = parseFloat(res.toFixed(6)).toString();;
 }
 
 btnSimple.addEventListener("click", simpleSum);
