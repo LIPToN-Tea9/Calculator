@@ -52,8 +52,8 @@ function simpleSum() {
     sum1 = input1.value + multiplication.value + input2.value;
   } else if (division.checked) {
     sum1 = input1.value + division.value + input2.value;
-  } else 
-    {resultS.textContent = "Error: select an operation";
+  } else {
+    resultS.textContent = "Error: select an operation";
     return;
   }
 
@@ -67,7 +67,7 @@ function simpleSum() {
     return;
   }
 
-  resultS.textContent = parseFloat(res.toFixed(6)).toString();;
+  resultS.textContent = parseFloat(res.toFixed(6)).toString();
 }
 
 btnSimple.addEventListener("click", simpleSum);
@@ -84,7 +84,7 @@ function expSum() {
       return;
     }
 
-    resultE.textContent = resExp;
+    resultE.textContent = parseFloat(resExp.toFixed(6)).toString();
   } catch (e) {
     resultE.textContent = "Error: Invalid expression";
   }
